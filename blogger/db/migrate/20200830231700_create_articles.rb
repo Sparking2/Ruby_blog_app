@@ -1,6 +1,6 @@
 # frozen_string_literal: false
 
-# instructions for migrating the database
+# instructions for creating the Articles table in the database
 class CreateArticles < ActiveRecord::Migration[6.0]
   def change
     create_table :articles do |t|
