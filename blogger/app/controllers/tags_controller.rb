@@ -1,0 +1,19 @@
+# frozen_string_literal: false
+
+# Helper for the heavylifting of Tags.
+class TagsController < ApplicationController
+  def index
+    @tags = Tag.all
+  end
+
+  def show
+    @tag = Tag.find(params[:id])
+  end
+
+  def destroy
+    @tag = Tag.find(params[:id])
+    flash.notice = "Tag '#{@tag.name}' Destroyed!"
+    @tag.destroy
+    redirect_to tags_path
+  end
+end
