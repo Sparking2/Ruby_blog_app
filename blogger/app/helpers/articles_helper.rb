@@ -3,6 +3,6 @@
 # Helper for the adding a new class.
 module ArticlesHelper
   def article_params
-    params.require(:article).permit(:title, :body, :tag_list)
+    params.require(:article).permit(:title, :body, :tag_list, :image)
   end
 end
