@@ -2,6 +2,8 @@
 
 # Helper for the heavylifting of Tags.
 class TagsController < ApplicationController
+  before_action :require_login, only: [:destroy]
+
   def index
     @tags = Tag.all
   end
